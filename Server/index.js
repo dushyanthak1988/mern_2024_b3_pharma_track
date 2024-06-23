@@ -4,9 +4,7 @@ const cors = require('cors');
 const connectDB = require('./Database/connect');
 const userRoutes = require('./routes/users.rout');
 const medicineRoutes = require('./routes/medicines.rout'); 
-require('dotenv').config();
-//const MONGODB_URL = "mongodb+srv://pharmatrack:<password>@pharmatrack.o3x8qlk.mongodb.net/pharmatrack"
-//connectDB(MONGODB_URL);
+require('dotenv').config(); 
 connectDB(process.env.MONGODB_URL);
 
 const app = express();
